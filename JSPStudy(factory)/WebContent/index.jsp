@@ -1,5 +1,5 @@
-<%@page import="kr.or.kosta.jsp.dao.JdbcDaoFactory2"%>
-<%@page import="kr.or.kosta.jsp.dao.DaoFactory"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.JdbcDaoFactory"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.DaoFactory"%>
 <%@ page contentType="text/html; charset=utf-8" %>
 
 <!DOCTYPE html>

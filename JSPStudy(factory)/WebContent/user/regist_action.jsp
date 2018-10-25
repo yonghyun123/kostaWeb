@@ -1,9 +1,9 @@
 <%@page contentType="text/html; charset=utf-8" %>
-<%@page import="kr.or.kosta.jsp.dao.UserDao"%>
-<%@page import="kr.or.kosta.jsp.dao.JdbcDaoFactory"%>
-<%@page import="kr.or.kosta.jsp.dao.DaoFactory"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.UserDao"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.JdbcDaoFactory"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.DaoFactory"%>
 <%--<%request.setCharacterEncoding("utf-8"); --%>
-<jsp:useBean id="user" class="kr.or.kosta.jsp.dao.User" scope="request"/>
+<jsp:useBean id="user" class="kr.or.kosta.shoppingmall.dao.User" scope="request"/>
 <jsp:setProperty property="*" name="user"/>
 <%
 //DaoFactory factory = new JdbcDaoFactory();

@@ -1,5 +1,5 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForTokens"%>
-<%@page import="kr.or.kosta.jsp.dao.User"%>
+<%@page import="kr.or.kosta.shoppingmall.common.dao.User"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page contentType="text/html; charset=utf-8"%>
