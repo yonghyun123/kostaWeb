@@ -51,11 +51,9 @@ public abstract class DaoFactory {
 		this.dataSource = dataSource;
 	}
 
-//	public abstract UserDao getUserDao();
 	public abstract Object getDao(String daoName);
 	public abstract Object getDao(Class cls);
-//	public BarDao getBarDao();
-//	public FooDao getFooDao();
+
 	
 	
 }

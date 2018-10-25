@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.or.kosta.shoppingmall.common.controller.Controller;
 import kr.or.kosta.shoppingmall.common.controller.ModelAndView;
+import kr.or.kosta.shoppingmall.user.domain.User;
 
 /**
  * hello.mall 요청에 대한 처리 클래스
@@ -26,12 +27,13 @@ public class SimpleDataController implements Controller {
 		
 		// plain text, xml, json 데이터 바로 출력		
 		String message = "모델2 기반 웹애플리케이션 개발";
-		response.setContentType("text/plain; charset=utf-8");
+		response.setContentType("application/json; charset=utf-8");
+		
+		String objectToReturn = "{ key1: 'value1', key2: 'value2' }";
 		PrintWriter out = null;
 		try {
-			
 			out = response.getWriter();
-			out.println(message);
+			out.println(objectToReturn);
 		} catch (IOException e) {
 			throw new ServletException(e.getMessage(), e);
 

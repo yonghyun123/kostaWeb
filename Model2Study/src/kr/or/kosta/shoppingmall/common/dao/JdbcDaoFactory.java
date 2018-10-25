@@ -20,14 +20,14 @@ public class JdbcDaoFactory extends DaoFactory {
 	
 	private Hashtable<String, Object> daos;
 	private String testPath = "C:\\Users\\kosta\\Desktop\\hanaWeb\\Model2Study\\WebContent\\WEB-INF\\dao-mapper.properties";
-	public JdbcDaoFactory(String daoPath) {
+	public JdbcDaoFactory(String daoMapperLocation) {
 		daos = new Hashtable<String, Object>();
 		// 매핑정보를 저장할 Properties 객체 생성
 		Properties prop = new Properties();
 		FileInputStream fis = null;
 		
 		try {
-			fis = new FileInputStream(daoPath);
+			fis = new FileInputStream(daoMapperLocation);
 			prop.load(fis);
 			Iterator keyIter = prop.keySet().iterator();
 			System.out.println("--- JDBC DAO factory생성 ---");
