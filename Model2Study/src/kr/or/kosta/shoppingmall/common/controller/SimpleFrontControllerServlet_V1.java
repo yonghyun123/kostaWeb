@@ -21,7 +21,6 @@ public class SimpleFrontControllerServlet_V1 extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)  throws IOException, ServletException {
 		process(request, response);
 	}
-	
 	public void process(HttpServletRequest request, HttpServletResponse response)  throws IOException, ServletException {
 		
 		/** 모든 세부 컨트롤러들에 대한 공통 기능 처리 */
@@ -70,7 +69,6 @@ public class SimpleFrontControllerServlet_V1 extends HttpServlet {
 		// RequestDispatcher를 사용하여 뷰(JSP)로 디스패치
 		request.getRequestDispatcher("/demo/hello.jsp").forward(request, response);
 	}
-	
 }
 
 

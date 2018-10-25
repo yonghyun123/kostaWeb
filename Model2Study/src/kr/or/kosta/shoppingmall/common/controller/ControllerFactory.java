@@ -15,7 +15,7 @@ public class ControllerFactory{
 	// 요청에 대한 세부 컨트롤러 클래스 생성 및 관리
 	private HashMap<String, Controller> controllerMap;
 
-	public ControllerFactory_backup(String controllerMapperLocation) {
+	public ControllerFactory(String controllerMapperLocation) {
 		controllerMap = new HashMap<String, Controller>();
 
 		// 매핑정보를 저장할 Properties 객체 생성

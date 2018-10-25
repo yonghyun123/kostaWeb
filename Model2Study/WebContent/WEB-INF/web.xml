@@ -3,10 +3,21 @@
   <display-name>Model2Study</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- 웹브라우저 모든 요청에 대한 단일 진입점 역할의 Front Controller Servlet(메인서블릿) 등록 -->
+  <servlet>
+		<servlet-name>frontController</servlet-name>
+		<servlet-class>kr.or.kosta.shoppingmall.common.controller.SimpleFrontControllerServlet_V4</servlet-class>
+		<init-param>
+			<param-name>controllerMapperLocation</param-name>
+			<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\controller-mapper.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+  <servlet-mapping>
+	  <servlet-name>frontController</servlet-name>
+	  <url-pattern>*.mall</url-pattern>
+  <!-- <url-pattern>/blog/*</url-pattern> -->
+  </servlet-mapping>
 </web-app>
