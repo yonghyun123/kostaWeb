@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean type="dao" name="userDao" class="kr.or.kosta.shoppingmall.user.dao.JdbcUserDao"/>
+	<bean type="service" name="userService" class="kr.or.kosta.shoppingmall.user.service.UserServiceImpl">
+	 	<!-- 여러개의 속성이 추가될 경우, property가 증가함 -->
+		<property name="userDaoProp" ref="userDao"/>
+	</bean>
+	
+</beans>

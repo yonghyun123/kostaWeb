@@ -92,5 +92,4 @@ public class SimpleFrontControllerServlet_V4 extends HttpServlet {
 		view = viewResolver.resolve(viewPath);
 		view.execute(request, response);
 	}
-
 }

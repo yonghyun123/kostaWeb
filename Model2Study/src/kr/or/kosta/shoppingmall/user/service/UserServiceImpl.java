@@ -10,18 +10,24 @@ import kr.or.kosta.shoppingmall.user.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
-	String daoMapperLocation = "C:\\Users\\kosta\\Desktop\\hanaWeb\\Model2Study\\WebContent\\WEB-INF\\dao-mapper.properties";
-	DaoFactory factory = new JdbcDaoFactory(daoMapperLocation);
 	UserDao userDao;
 	
+	public UserDao getUserDao() {
+		return userDao;
+	}
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+	
 	@Override
-	public User search(String id) throws Exception {
-		return null;
+	public User search(String id, String passwd) throws Exception {
+		return userDao.certify(id, passwd);
 	}
 
 	@Override
 	public List<User> list() throws Exception {
-		userDao = (UserDao)factory.getDao(JdbcUserDao.class);
 		return userDao.listAll();
 	}
 

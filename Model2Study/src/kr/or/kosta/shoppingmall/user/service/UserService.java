@@ -12,7 +12,7 @@ import kr.or.kosta.shoppingmall.user.domain.User;
  */
 public interface UserService {
 	/** 회원 검색 */
-	public User search(String id) throws Exception;
+	public User search(String id, String passwd) throws Exception;
 	/** 회원 목록 */
 	public List<User> list() throws Exception;
 	

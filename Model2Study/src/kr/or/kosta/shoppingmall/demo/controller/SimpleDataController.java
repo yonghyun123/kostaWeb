@@ -2,8 +2,8 @@ package kr.or.kosta.shoppingmall.demo.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -29,16 +29,19 @@ public class SimpleDataController implements Controller {
 		String message = "모델2 기반 웹애플리케이션 개발";
 		response.setContentType("application/json; charset=utf-8");
 		
+		User tempUser = new User("1111", "1111", "1111", "1111", "1111");
 		String objectToReturn = "{ key1: 'value1', key2: 'value2' }";
+		Map<String, Object> tempObj = new HashMap();
+		tempObj.put("user", tempUser);
 		PrintWriter out = null;
 		try {
 			out = response.getWriter();
-			out.println(objectToReturn);
+			out.println(tempObj);
 		} catch (IOException e) {
 			throw new ServletException(e.getMessage(), e);
-
 		}
-	
+		
+
 		
 		return null;
 	}

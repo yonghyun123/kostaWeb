@@ -23,6 +23,7 @@ public class JdbcUserDao implements UserDao {
 		return dataSource;
 	}
 
+	
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}

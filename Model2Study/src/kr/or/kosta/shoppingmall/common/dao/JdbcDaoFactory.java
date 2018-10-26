@@ -47,11 +47,11 @@ public class JdbcDaoFactory extends DaoFactory {
 //	public UserDao getUserDao() {
 //		return (UserDao)daos.get("jdbcUserDao");
 //	}
-	@Override
+	
 	public Object getDao(String daoName) {
 		return daos.get(daoName);
 	}
-	@Override
+	
 	public Object getDao(Class cls) {
 		return getDao(cls.getName());
 	}
