@@ -1,0 +1,8 @@
+2018-10-29 14:38:25 [WARN ] [or.kosta.shoppingmall.log4j.SomeService:14] warn 로그메시지 
+2018-10-29 14:38:25 [ERROR] [or.kosta.shoppingmall.log4j.SomeService:15] error 로그메시지 
+2018-10-29 14:38:25 [FATAL] [or.kosta.shoppingmall.log4j.SomeService:16] fatal 로그메시지 
+2018-10-29 14:38:57 [DEBUG] [or.kosta.shoppingmall.log4j.SomeService:12] debug 로그메시지 
+2018-10-29 14:38:57 [INFO ] [or.kosta.shoppingmall.log4j.SomeService:13] info 로그메시지 
+2018-10-29 14:38:57 [WARN ] [or.kosta.shoppingmall.log4j.SomeService:14] warn 로그메시지 
+2018-10-29 14:38:57 [ERROR] [or.kosta.shoppingmall.log4j.SomeService:15] error 로그메시지 
+2018-10-29 14:38:57 [FATAL] [or.kosta.shoppingmall.log4j.SomeService:16] fatal 로그메시지 
