@@ -8,15 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.or.kosta.shoppingmall.common.controller.Controller;
 import kr.or.kosta.shoppingmall.common.controller.ModelAndView;
-import kr.or.kosta.shoppingmall.common.service.XMLObjectFactory;
+import kr.or.kosta.shoppingmall.common.factory.XMLObjectFactory;
 import kr.or.kosta.shoppingmall.user.domain.User;
 import kr.or.kosta.shoppingmall.user.service.UserService;
 import kr.or.kosta.shoppingmall.user.service.UserServiceImpl;
 
 public class UserListController implements Controller {
 	
-//	private UserService userService = new UserServiceImpl();
-//	private UserService userService =  new ServiceFactory("mapperLocation").getService(cls);
 	private UserService userService;
 
 	@Override
@@ -24,7 +22,7 @@ public class UserListController implements Controller {
 			throws ServletException {
 		ModelAndView mav = new ModelAndView();
 		XMLObjectFactory factory = (XMLObjectFactory)request.getServletContext().getAttribute("objectFactory");
-		userService = (UserService)factory.getService(UserServiceImpl.class);
+		userService = (UserService)factory.getBean(UserServiceImpl.class);
 		
 		List<User> list = null;
 		try {

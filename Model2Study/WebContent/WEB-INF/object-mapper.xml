@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
+
+	<bean type="component" name="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521"/>
+		<property name="username" value="hr"/>
+		<property name="password" value="hr"/>
+		<property name="initialSize" value="2"/>
+		<property name="maxTotal" value="10"/>
+		<property name="maxIdle" value="5"/>
+	</bean>
+
 	<bean type="dao" name="userDao" class="kr.or.kosta.shoppingmall.user.dao.JdbcUserDao"/>
 	<bean type="service" name="userService" class="kr.or.kosta.shoppingmall.user.service.UserServiceImpl">
 	 	<!-- 여러개의 속성이 추가될 경우, property가 증가함 -->
-		<property name="userDaoProp" ref="userDao"/>
+		<property name="userDao" ref="userDao"/>
 	</bean>
 	
 </beans>

@@ -9,7 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import kr.or.kosta.shoppingmall.common.service.XMLObjectFactory;
+import kr.or.kosta.shoppingmall.common.factory.XMLObjectFactory;
 
 /**
  * ServletContext 생명주기(생성/소멸) 관련 이벤트 리스너
@@ -25,21 +25,17 @@ public class ServletContextLoadListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event)  {
 		ServletContext servletContext = event.getServletContext();
 		
-//		String serviceMapperLocation = servletContext.getInitParameter("serviceMapperLocation");
-//		String daoMapperLocation = servletContext.getInitParameter("daoMapperLocation");
 		String objectMapperLocation = servletContext.getInitParameter("objectMapperLocation");
 		
-//		ServiceFactory serviceFactory = new ServiceFactory(serviceMapperLocation);
-//		DaoFactory daoFactory = new JdbcDaoFactory(daoMapperLocation);
-		
 		XMLObjectFactory objectFactory = null;
+	
 		try {
 			objectFactory = new XMLObjectFactory(objectMapperLocation);
-		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ParserConfigurationException
-				| SAXException | IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		
 		// 모든 서블릿, JSP들이 공유할 수 있도록 ServletContext에 DaoFactory 저장
 //		servletContext.setAttribute("serviceFactory", serviceFactory);
