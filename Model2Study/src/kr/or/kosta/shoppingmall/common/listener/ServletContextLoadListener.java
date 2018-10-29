@@ -1,12 +1,15 @@
 package kr.or.kosta.shoppingmall.common.listener;
 
+import java.io.IOException;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.xml.parsers.ParserConfigurationException;
 
-import kr.or.kosta.shoppingmall.common.dao.DaoFactory;
-import kr.or.kosta.shoppingmall.common.dao.JdbcDaoFactory;
-import kr.or.kosta.shoppingmall.common.service.ObjectFactory;
+import org.xml.sax.SAXException;
+
+import kr.or.kosta.shoppingmall.common.service.XMLObjectFactory;
 
 /**
  * ServletContext 생명주기(생성/소멸) 관련 이벤트 리스너
@@ -29,7 +32,14 @@ public class ServletContextLoadListener implements ServletContextListener {
 //		ServiceFactory serviceFactory = new ServiceFactory(serviceMapperLocation);
 //		DaoFactory daoFactory = new JdbcDaoFactory(daoMapperLocation);
 		
-		ObjectFactory objectFactory = new ObjectFactory(objectMapperLocation);
+		XMLObjectFactory objectFactory = null;
+		try {
+			objectFactory = new XMLObjectFactory(objectMapperLocation);
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ParserConfigurationException
+				| SAXException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// 모든 서블릿, JSP들이 공유할 수 있도록 ServletContext에 DaoFactory 저장
 //		servletContext.setAttribute("serviceFactory", serviceFactory);

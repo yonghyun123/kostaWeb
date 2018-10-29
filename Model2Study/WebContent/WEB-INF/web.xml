@@ -13,18 +13,8 @@
 	
 	<!-- Listener 사용시 초기 파라미터(service-mapper, dao-mapper) 프로퍼티 등록 -->
 	<context-param>
-		<param-name>serviceMapperLocation</param-name>
-		<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\service-mapper.properties</param-value>
-	</context-param>
-	
-	<context-param>
-		<param-name>daoMapperLocation</param-name>
-		<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\dao-mapper.properties</param-value>
-	</context-param>
-	
-	<context-param>
 		<param-name>objectMapperLocation</param-name>
-		<param-value>>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\object-mapper.properties</param-value>
+		<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\object-mapper.xml</param-value>
 	</context-param>
 	
 	
@@ -57,7 +47,7 @@
 		<url-pattern>/user/list.jsp</url-pattern>
 		<url-pattern>/user/listByPage.jsp</url-pattern>
 		<url-pattern>/user/listByPage-v2.jsp</url-pattern>
-		<url-pattern>/user/list.mall</url-pattern>
+		<!-- <url-pattern>/user/list.mall</url-pattern>  -->
 		<url-pattern>/some/*</url-pattern>
 	</filter-mapping>
   
