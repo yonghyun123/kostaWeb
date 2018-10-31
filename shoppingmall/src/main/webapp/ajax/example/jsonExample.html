@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var object = {
+		name:'김기정',
+		age: 21,
+		flag: true
+};
+
+console.log(object.name);
+console.log(object['age']);
+
+//var array = new Arrary();
+var array = ['김기정','박찬호', object, Math, new Date()];
+
+array.forEach(function(v){
+	console.log(v.constructor);
+});
+
+var text='{ "name": "김기정", "age": 20, "flag": true }';
+console.log(text);
+
+var text2 = JSON.stringify(object);
+//alert(text2);
+
+var text3 = JSON.stringify(array);
+//alert(text3);
+
+var person = JSON.parse(text2);
+alert(person.name+", "+person.age+", "+ person.flag);
+</script>
+
+</body>
+</html>

@@ -3,5 +3,6 @@
 
 	<!-- 회원관리 -->
 	<bean type="controller" name="/user/list" class="kr.or.kosta.shoppingmall.user.controller.UserListController" />
-
+	<bean type="controller" name="/ajax" class="kr.or.kosta.shoppingmall.demo.controller.AjaxController" />
+	
 </beans>

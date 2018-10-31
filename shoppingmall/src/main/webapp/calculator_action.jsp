@@ -7,14 +7,19 @@ String op = request.getParameter("op");
 System.out.println(num1);
 System.out.println(num2);
 System.out.println(op);
-%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title></title>
-</head>
-<body>
 
-</body>
-</html>
+int result;
+int n1 = Integer.parseInt(num1);
+int n2 = Integer.parseInt(num2);
+if(op.equals("*")){
+	result = n1 * n2;
+} else if(op.equals("/")){
+	result = n1 / n2;
+} else if(op.equals("-")){
+	result = n1 - n2;
+} else {
+	result = n1 + n2;
+}
+
+out.println(result);
+%>

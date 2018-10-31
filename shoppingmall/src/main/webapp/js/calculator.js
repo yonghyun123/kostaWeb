@@ -22,6 +22,8 @@ resultBtn.addEventListener('click', function(){
 		resultVal = num1 / num2;
 	}
 	console.log(resultVal);
+	
+//	result = eval(num1+opText+num2);
 	document.querySelector('#output').innerText = resultVal;
 	
 })

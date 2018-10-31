@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/ajax.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById('send').addEventListener('click', function(){
+		var message = document.getElementById('message').value;
+		ajax({
+			method: 'get',
+			url: 'server.jsp',
+			param: 'message='+message,
+			callback: receiveServer
+		});
+	});
+}
+
+function receiveServer(request){
+	appendMessage(request.responseText);
+}
+
+function appendMessage(message){
+	var messageBox = document.getElementById('messageBox');
+	if(messageBox){
+		messageBox.innerHTML = message;
+	}
+}
+</script>
+</head>
+<body>
+
+<input type="text" name="message" id="message" size=20" value="기본텍스트">
+<input type="button" value="전송" id="send">
+<span id="messageBox"></span>
+</body>
+</html>
