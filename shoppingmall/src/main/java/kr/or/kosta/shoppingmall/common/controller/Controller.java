@@ -1,7 +1,5 @@
 package kr.or.kosta.shoppingmall.common.controller;
 
-import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author 김기정
  */
 public interface Controller {
-	/** 실행 규약 메소드 
-	 * @throws IOException */
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+	
+	/** 실행 규약 메소드 */
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException;
 }

@@ -54,10 +54,10 @@
   <!-- 웹브라우저 모든 요청에 대한 단일 진입점 역할의 Front Controller Servlet(메인서블릿) 등록 -->
   	<servlet>
 		<servlet-name>frontController</servlet-name>
-		<servlet-class>kr.or.kosta.shoppingmall.common.controller.SimpleFrontControllerServlet_V5</servlet-class>
+		<servlet-class>kr.or.kosta.shoppingmall.common.controller.SimpleFrontControllerServlet_V4</servlet-class>
 		<init-param>
 			<param-name>controllerMapperLocation</param-name>
-			<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\controller-mapper.xml</param-value>
+			<param-value>C:\Users\kosta\Desktop\hanaWeb\Model2Study\WebContent\WEB-INF\object-mapper.properties</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

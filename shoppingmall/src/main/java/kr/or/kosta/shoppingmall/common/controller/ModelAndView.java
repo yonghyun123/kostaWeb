@@ -10,7 +10,6 @@ public class ModelAndView{
 	
 	public ModelAndView() {
 		model = new HashMap<String, Object>();
-		
 	}
 	public ModelAndView(String view, Map<String, Object> model) {
 		this.view = view;
